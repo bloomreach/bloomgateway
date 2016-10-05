@@ -41,7 +41,7 @@ We have tested with following environment,
 Download the latest release version from [https://github.com/bloomreach/bloomgateway/releases](https://github.com/bloomreach/bloomgateway/releases) and run the below command.
 
 ```
-sudo dpkg -i bloomgateway_0.9.23_amd64.deb
+sudo dpkg -i bloomgateway_0.10.4_amd64.deb
 ```
 
 ### Start Service
@@ -73,7 +73,7 @@ curl http://localhost:6070/
 Clone bloomgateway from github.
 
 ```
-git clone https://github.com/bloomreach/bloomgateway/bloomgateway.git
+git clone https://github.com/bloomreach/bloomgateway.git
 ```
 
 Build the debian package.
@@ -448,8 +448,8 @@ Bloomreach Engineering Blog: http://engineering.bloomreach.com/bloomgateway-ligh
 
 ## Contributors
 
-* **Ronak Kothari** (ronak.kothari@gmail.com) - Main developer/Project owner
-* **Navneet Gupta** (navneet.gupta@bloomreach.com)
+* **Ronak Kothari** (ronak.kothari@gmail.com) - Project owner/Maintainer
+* **Navneet Gupta** (navneetnitw@gmail.com)
 
 ## License
 
