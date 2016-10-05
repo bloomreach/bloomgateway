@@ -22,7 +22,7 @@ To provide high performace edge service solution, we are using [OpenResty](https
 - fallback support of a request on error to an alternative end-point
 - re-routing of a request based on different rules to support A/B testing scenarios
 - config persistence by storing them along with service
-- config data consistency check in pull model mode deployment of cluster in distributed environment
+- config data consistency check in pull-config-update mode of deployment of service
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ We have tested with following environment,
 Download the latest release version from [https://github.com/bloomreach/bloomgateway/releases](https://github.com/bloomreach/bloomgateway/releases) and run the below command.
 
 ```
-sudo dpkg -i bloomgateway_0.10.4_amd64.deb
+sudo dpkg -i bloomgateway_0.10.5_amd64.deb
 ```
 
 ### Start Service
@@ -104,7 +104,7 @@ POST /update/config?type=plugin&name=<plugin name>&phase=<registered phase of pl
 * **URL Params**
   - type, name and phase are required params
   - name : plugin name.
-    - Currently supported plugins are "access", "ratelimiter", "fallback" and "router"
+    - Currently, supported plugins are "access", "ratelimiter", "fallback" and "router"
   - phase : registered phase of the plugin.
     - Plugins "access, ratelimiter and fallback" are registered in the "access" phase of the request.
     - Plugin "fallback" is registered in the "error" phase of the request.
@@ -307,7 +307,7 @@ This module helps to re-route requests to configured end-points. This is useful 
 
 ##### Example
 
-In this example, we have configured re-routed requests for an api /api/v1/core/
+In this example, we have configured routing rules for an api /api/v1/core/
 - all the requests with URL param, account_id = 1057, are re-routed to A/B testing server
 - all the requests with 5 digit keys starting with 1, are re-routed to set of upstream server of groupA
 
@@ -437,10 +437,18 @@ Currently, BloomGateway only supports [AWS S3](https://aws.amazon.com/s3/) hook 
 To start the BloomGateway in PULL-config-update mode,
 
 ```
-sudo bloomgateway start -i <cluster_id> -s <s3 location>
+sudo bloomgateway start -i <clusterid> -s <s3 location>
 ```
 
-In pull mode, BloomGateway service pulls the all configuration from the central s3 location. You can use the s3cli.py command line interface to create/update those configs.
+Here, s3 location is base s3 bucket path, and clusterid is a child bucket underneath and contains all the configurations needed for service. You can use the bg_s3cli command line interface to create/update those configs.
+
+You can install bg_s3cli using,
+
+```
+git clone https://github.com/bloomreach/bloomgateway.git
+cd cli
+sudo python setup.py install
+```
 
 ## More Information
 
@@ -448,7 +456,7 @@ Bloomreach Engineering Blog: http://engineering.bloomreach.com/bloomgateway-ligh
 
 ## Versioning
 
-BloomGateway is following date based versioning with the form <major>.<minor>.<path> as version tag. Here, <major> is the number of years passed since the project started, <minor> is the month, and <patch> represents the date.
+BloomGateway is following date based versioning with the form `<major>.<minor>.<path>` as version tag. Here, `<major>` is the number of years passed since the project started, `<minor>` is the month, and `<patch>` represents the date.
 
 ## Contributors
 
