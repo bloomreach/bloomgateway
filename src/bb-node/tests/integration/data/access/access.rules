@@ -1,0 +1,51 @@
+[
+{
+"type" : "header",
+"api" : "/",
+"key" : "denied",
+"value" : "1",
+"access" : "deny"
+},
+{
+"type" : "header",
+"api" : "/",
+"key" : "cust",
+"value" : "test",
+"access" : "deny"
+},
+{
+"type" : "header",
+"api" : "/",
+"key" : "cust",
+"value" : "test1",
+"access" : "deny"
+},
+{
+"type" : "header",
+"api" : "/api/v1/core/",
+"key" : "remote_addr",
+"value" : "127.0.0.1",
+"access" : "deny"
+},
+{
+"type" : "header",
+"api" : "/api/v1/core/",
+"key" : "remote_addr",
+"value" : "127.0.0.2",
+"access" : "deny"
+},
+{
+"type" : "param",
+"api" : "/",
+"key" : "account_id",
+"value" : "1234",
+"access" : "deny"
+},
+{
+"type" : "param",
+"api" : "/",
+"key" : "account_id",
+"value" : "1235",
+"access" : "deny"
+}
+]

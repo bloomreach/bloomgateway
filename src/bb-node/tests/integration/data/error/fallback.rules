@@ -1,0 +1,24 @@
+[{
+  "endpoints": [{
+    "1": {
+      "headers": {},
+      "params": {
+        "fallback": "true",
+        "fallback_from": "localhost"
+      },
+      "name": "localhost:6073"
+    }
+  }, {
+    "2": {
+      "headers": {},
+      "params": {
+        "fallback": "true",
+        "fallback_from": "localhost"
+      },
+      "name": "127.0.0.1:6074"
+    }
+  }],
+  "api": "/api/v1/core/",
+  "errors": ["500", "502", "503", "504"],
+  "key": "/api/v1/core/_500_502_503_504"
+}]

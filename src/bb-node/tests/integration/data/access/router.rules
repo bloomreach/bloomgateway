@@ -1,0 +1,44 @@
+[
+{
+"type" : "param",
+"api" : "/api/v1/core/",
+"key" : "test_uid",
+"value" : "test_value",
+"endpoint" : "127.0.0.1:6073"
+},
+{
+"type" : "param",
+"api" : "/",
+"key" : "test_uid",
+"value" : "test_value",
+"endpoint" : "127.0.0.1:6073"
+},
+{
+"type" : "header",
+"api" : "/",
+"key" : "test",
+"value" : "test_value_header",
+"endpoint" : "127.0.0.1:6073"
+},
+{
+"type" : "param",
+"api" : "/api/v1/core/",
+"key" : "test_uid",
+"value_matches" : "uid(%3D|=)9[0-9]{13}",
+"endpoint" : "127.0.0.1:6073"
+},
+{
+"type" : "param",
+"api" : "/",
+"key" : "test_uid",
+"value_matches" : "uid(%3D|=)9[0-9]{13}",
+"endpoint" : "127.0.0.1:6073"
+},
+{
+"type" : "header",
+"api" : "/",
+"key" : "test",
+"value_matches" : "uid(%3D|=)9[0-9]{13}",
+"endpoint" : "127.0.0.1:6073"
+}
+]

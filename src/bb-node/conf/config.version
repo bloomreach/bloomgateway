@@ -1,0 +1,13 @@
+{
+  "nginx_conf" : "no_version",
+  "modules" : {
+    "access" : {
+      "access" : "no_version",
+      "ratelimiter" : "no_version",
+      "router" : "no_version"
+    },
+    "error" : {
+      "fallback" : "no_version"
+    }
+  }
+}
