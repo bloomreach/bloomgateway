@@ -27,7 +27,7 @@ shmem = require "bb.core.shmem"
 
 local _M = {}
 
-_M.version = "0.10.4"
+_M.version = "0.10.5"
 _M.path = ngx.config.prefix() .. "../bb/lualib/"
 
 return _M

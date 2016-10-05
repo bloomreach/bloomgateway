@@ -22,9 +22,9 @@ from setuptools import setup, find_packages
 
 __author__ = 'Ronak Kothari'
 __author_email__ = 'ronak.kothari@gmail.com'
-__copyright__ = 'Copyright 2015 BloomReach, Inc.'
+__copyright__ = 'Copyright 2016 BloomReach, Inc.'
 __license__ = 'http://www.apache.org/licenses/LICENSE-2.0'
-__version__ = '0.10.4'
+__version__ = '0.10.5'
 __maintainer__ = __author__
 __status__ = 'Development'
 

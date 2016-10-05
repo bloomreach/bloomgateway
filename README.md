@@ -1,16 +1,16 @@
-# BloomGateway (Version 0.10.4)
+# BloomGateway (Version 0.10.5)
 [![Join the chat at https://gitter.im/bloomreach/bloomgateway](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bloomreach/bloomgateway?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Ronak Kothari (ronak.kothari@gmail.com)
 
 ## Overview
 
-BloomGateway is a lightweight entry point service which helps in controlling edge service requirements in distributed environment. It is designed with high availability, high performance and low latency of mediating service request or denying. It supports a simple pluggable module architecture for extending service for diverse needs with minimal efforts.
+BloomGateway is a lightweight entry point service which helps in controlling edge service requirements in distributed environment. It is designed to provide high availability, high performance and low latency for mediating service requests. It supports a simple pluggable module architecture for extending service for addressing diverse needs with minimal efforts.
 
 At [BloomReach](http://www.bloomreach.com), we used this in front of our public facing as well as internal facing infrastructure.
 
 ### Architecture
 
-To provide high performace edge service solution, we are using [OpenResty](https://openresty.org/en/getting-started.html) as our underlying engine which is nothing but [Nginx](https://www.nginx.com/) + [Lua](https://www.lua.org/). On top of it, we are having our core engine which controls initialization and execution workflow of different plugins, provides pull as well as push model for updating configs at runtime, and supports health checks functionality for checking service and config consistency. The below figure gives the high level view of the service.
+To provide high performace edge service solution, we are using [OpenResty](https://openresty.org/en/getting-started.html) as our underlying engine which is nothing but [Nginx](https://www.nginx.com/) + [Lua](https://www.lua.org/). On top of that, we are having our core engine which controls initialization and execution workflow of different plugins, provides pull as well as push model for updating configs at runtime, and supports health checks functionality for checking service and config consistency. The below figure gives the high level view of the service.
 
 ![Alt text](/design.png?style=centerme&raw=ture "High Level Architecture")
 
@@ -445,6 +445,10 @@ In pull mode, BloomGateway service pulls the all configuration from the central 
 ## More Information
 
 Bloomreach Engineering Blog: http://engineering.bloomreach.com/bloomgateway-lightweight-entry-point-service/
+
+## Versioning
+
+BloomGateway is following date based versioning with the form <major>.<minor>.<path> as version tag. Here, <major> is the number of years passed since the project started, <minor> is the month, and <patch> represents the date.
 
 ## Contributors
 
