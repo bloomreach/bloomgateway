@@ -452,7 +452,7 @@ sudo python setup.py install
 
 ## More Information
 
-Bloomreach Engineering Blog: http://engineering.bloomreach.com/bloomgateway-lightweight-entry-point-service/
+Bloomreach Engineering Blog: http://engineering.bloomreach.com/introducing-bloomgateway-a-lightweight-entry-point-service/
 
 ## Versioning
 
